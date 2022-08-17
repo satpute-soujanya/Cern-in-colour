@@ -2,30 +2,39 @@ const backgroundColor = document.getElementById('background')
 const textColor = document.getElementById('text')
 const linkColor = document.getElementById('link')
 // console.log(linkColor)
-
-const colorTheme = {
-  background: '',
-  text: '',
-  link: '',
+var colorTheme = {
+  background: '#49008d',
+  text: '#FFAA0C',
+  link: '#F0F0F0',
 }
-function saveTolocalStorage(object) {
-  window.localStorage.setItem('colorTheme', JSON.stringify(object))
+function saveTolocalStorage() {
+  window.localStorage.setItem('colorTheme', JSON.stringify(colorTheme))
+  // console.log('from saving', colorTheme)
 }
-function changeBackground(e) {
+function setInputStyle() {
+  backgroundColor.value = colorTheme.background
+  textColor.value = colorTheme.text
+  linkColor.value = colorTheme.link
+}
+function getBackgroundColor(e) {
   colorTheme.background = e.target.value
-  saveTolocalStorage(colorTheme)
+  saveTolocalStorage()
 }
-function changeTextColor(e) {
+function getTextColor(e) {
   colorTheme.text = e.target.value
-  saveTolocalStorage(colorTheme)
+  saveTolocalStorage()
 }
-function changeLinkColor(e) {
+function getLinkColor(e) {
   colorTheme.link = e.target.value
-  saveTolocalStorage(colorTheme)
+  saveTolocalStorage()
 }
-
-backgroundColor.addEventListener('change', changeBackground)
-textColor.addEventListener('change', changeTextColor)
-linkColor.addEventListener('change', changeLinkColor)
-
-console.log('hello')
+function getColorFromLocalStorage() {
+  colorTheme = JSON.parse(window.localStorage.getItem('colorTheme'))
+  setInputStyle()
+  // console.log('from storage', colorTheme)
+}
+saveTolocalStorage()
+getColorFromLocalStorage()
+backgroundColor.addEventListener('change', getBackgroundColor)
+textColor.addEventListener('change', getTextColor)
+linkColor.addEventListener('change', getLinkColor)
