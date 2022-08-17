@@ -1,6 +1,8 @@
 
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 <TITLE>A W3 server usingVMS DCL language</TITLE>
+<link rel="stylesheet" href="../../../main.css" />
+
 <NEXTID 5>
 <H1>DCL Server</H1>It is possible to write a W3 server in DCL, the VMS command interpreter
 language. This has the advantage (over C for example) of quick prototyping
@@ -53,6 +55,8 @@ of the internet socket. This must be opened for write by the DCL file.
 Thanks to Jonathan Streets (FNAL) for figuring that bit out.
 <H2>Building the server</H2>To make the WWW_SERVER.EXE file, you run MMS with the macro MULTINET=1
 defined. Put the MMS file as descrip.mms in the same directory.
+<script src="../../../main.js"></script>
+
 <XMP>
            $ MMS/macro=(multinet=1)
 </XMP>The code has been tested with Multinet/TCP-IP. If you run it with
