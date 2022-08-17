@@ -9,12 +9,13 @@ var colorTheme = {
 }
 function saveTolocalStorage() {
   window.localStorage.setItem('colorTheme', JSON.stringify(colorTheme))
-  // console.log('from saving', colorTheme)
+  console.log('from saving', colorTheme)
 }
 function setInputStyle() {
-  backgroundColor.value = colorTheme.background
-  textColor.value = colorTheme.text
-  linkColor.value = colorTheme.link
+  console.log('from input Style ', colorTheme)
+  backgroundColor.style.value = colorTheme.background
+  textColor.style.value = colorTheme.text
+  linkColor.style.value = colorTheme.link
 }
 function getBackgroundColor(e) {
   colorTheme.background = e.target.value

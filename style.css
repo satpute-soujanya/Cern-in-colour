@@ -17,7 +17,7 @@ section {
   width: 100vw;
   justify-content: space-around;
   flex-wrap: nowrap;
-  margin-bottom: 100px;
+  margin-bottom: 80px;
 }
 header {
   display: flex;
