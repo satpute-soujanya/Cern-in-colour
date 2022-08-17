@@ -1,15 +1,65 @@
-<html><head>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-</head><body><header>
-<title>http://info.cern.ch</title>
-</header>
-
-<h1>http://info.cern.ch - home of the first website</h1>
-<p>From here you can:</p>
-<ul>
-<li><a href="hypertext/WWW/TheProject.html">Browse the first website</a></li>
-<li><a href="http://line-mode.cern.ch/www/hypertext/WWW/TheProject.html">Browse the first website using the line-mode browser simulator</a></li>
-<li><a href="http://home.web.cern.ch/topics/birth-web">Learn about the birth of the web</a></li>
-<li><a href="http://home.web.cern.ch/about">Learn about CERN, the physics laboratory where the web was born</a></li>
-</ul>
-</body></html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cern in Color</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Cern in color -->
+    <header>
+      <h1>World Wide Web project</h1>
+      <h2>With just pinch of colors!</h2>
+    </header>
+    <section>
+      <div class="color_picker">
+        <h2>Choose Colors</h2>
+        <div class="color-chose-container">
+          <div class="input-style">
+            <p>Background</p>
+            <div class="input-color-container">
+              <input
+                class="Background-color input-color"
+                value="#4A2b8e"
+                type="color"
+                id="background"
+              />
+            </div>
+          </div>
+          <div class="input-style">
+            <p>Text</p>
+            <div class="input-color-container">
+              <input
+                class="Text-color input-color"
+                value="#eba142"
+                type="color"
+                id="text"
+              />
+            </div>
+          </div>
+          <div class="input-style">
+            <p>Links</p>
+            <div class="input-color-container">
+              <input
+                class="Link-color input-color"
+                value="#ffffff"
+                type="color"
+                id="link"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="preview">
+        <iframe src="hypertext/WWW/TheProject.html" frameborder="0"></iframe>
+      </div>
+    </section>
+    <hr />
+    <footer>
+      <p>Full page website <a href="hypertext/WWW/TheProject.html">here</a></p>
+    </footer>
+    <script src="./index.js"></script>
+  </body>
+</html>
